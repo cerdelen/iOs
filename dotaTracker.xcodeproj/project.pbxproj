@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		786B62572D7C516400D5C211 /* dotaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B62562D7C516400D5C211 /* dotaTrackerApp.swift */; };
-		786B62592D7C516400D5C211 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B62582D7C516400D5C211 /* ContentView.swift */; };
 		786B625B2D7C516500D5C211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786B625A2D7C516500D5C211 /* Assets.xcassets */; };
 		786B625E2D7C516500D5C211 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786B625D2D7C516500D5C211 /* Preview Assets.xcassets */; };
 		786B62682D7C516500D5C211 /* dotaTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B62672D7C516500D5C211 /* dotaTrackerTests.swift */; };
 		786B62722D7C516500D5C211 /* dotaTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B62712D7C516500D5C211 /* dotaTrackerUITests.swift */; };
 		786B62742D7C516500D5C211 /* dotaTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B62732D7C516500D5C211 /* dotaTrackerUITestsLaunchTests.swift */; };
+		786B62822D7C54F700D5C211 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B62812D7C54F700D5C211 /* DataModels.swift */; };
+		786B62872D7C562700D5C211 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B62862D7C562700D5C211 /* ProfileView.swift */; };
+		786B628B2D7C92A800D5C211 /* SteamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B628A2D7C92A800D5C211 /* SteamService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		786B62532D7C516400D5C211 /* dotaTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dotaTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786B62562D7C516400D5C211 /* dotaTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotaTrackerApp.swift; sourceTree = "<group>"; };
-		786B62582D7C516400D5C211 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		786B625A2D7C516500D5C211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786B625D2D7C516500D5C211 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		786B62632D7C516500D5C211 /* dotaTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dotaTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,9 @@
 		786B626D2D7C516500D5C211 /* dotaTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dotaTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		786B62712D7C516500D5C211 /* dotaTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotaTrackerUITests.swift; sourceTree = "<group>"; };
 		786B62732D7C516500D5C211 /* dotaTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotaTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		786B62812D7C54F700D5C211 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		786B62862D7C562700D5C211 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		786B628A2D7C92A800D5C211 /* SteamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,10 @@
 		786B624A2D7C516400D5C211 = {
 			isa = PBXGroup;
 			children = (
+				786B62892D7C567200D5C211 /* Utilities */,
+				786B62882D7C566800D5C211 /* Services */,
+				786B62852D7C560B00D5C211 /* Views */,
+				786B62802D7C54D600D5C211 /* Models */,
 				786B62552D7C516400D5C211 /* dotaTracker */,
 				786B62662D7C516500D5C211 /* dotaTrackerTests */,
 				786B62702D7C516500D5C211 /* dotaTrackerUITests */,
@@ -95,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				786B62562D7C516400D5C211 /* dotaTrackerApp.swift */,
-				786B62582D7C516400D5C211 /* ContentView.swift */,
 				786B625A2D7C516500D5C211 /* Assets.xcassets */,
 				786B625C2D7C516500D5C211 /* Preview Content */,
 			);
@@ -125,6 +132,37 @@
 				786B62732D7C516500D5C211 /* dotaTrackerUITestsLaunchTests.swift */,
 			);
 			path = dotaTrackerUITests;
+			sourceTree = "<group>";
+		};
+		786B62802D7C54D600D5C211 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				786B62812D7C54F700D5C211 /* DataModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		786B62852D7C560B00D5C211 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				786B62862D7C562700D5C211 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		786B62882D7C566800D5C211 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				786B628A2D7C92A800D5C211 /* SteamService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		786B62892D7C567200D5C211 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				786B62592D7C516400D5C211 /* ContentView.swift in Sources */,
+				786B62872D7C562700D5C211 /* ProfileView.swift in Sources */,
+				786B628B2D7C92A800D5C211 /* SteamService.swift in Sources */,
+				786B62822D7C54F700D5C211 /* DataModels.swift in Sources */,
 				786B62572D7C516400D5C211 /* dotaTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
