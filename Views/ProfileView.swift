@@ -10,13 +10,14 @@ import SwiftUI
 import Combine
 
 struct ProfileView: View {
+    let steamID: SteamID
     @State private var player: PlayerSummaryResponse.PlayerSummary?
     @State private var matchHistory: MatchHistoryResponse?
     @State private var matchHistoryArray: [MatchDetails]?
     @State private var isLoading = false
     @State private var errorMessage: String?
     @State private var showAllGames = false
-    @State private var steamID: SteamID = SteamID.bit32(39401116)
+//    @State private var steamID: SteamID = SteamID.bit32(39401116)
     private let steamService = SteamService()
 
     var body: some View {
@@ -55,7 +56,6 @@ struct ProfileView: View {
         .onAppear {
             fetchData()
         }
-        
     }
 
     private func fetchData() {
@@ -67,7 +67,7 @@ struct ProfileView: View {
                 isLoading = false
                 switch completion {
                 case .failure(let error):
-                    self.errorMessage = error.localizedDescription
+                    self.errorMessage = "Error fetching Player Summary: " + error.localizedDescription
                 case .finished:
                     break
                 }
@@ -83,7 +83,7 @@ struct ProfileView: View {
                     self.isLoading = false
                     switch completion {
                     case .failure(let error):
-                        self.errorMessage = error.localizedDescription
+                        self.errorMessage = "Error fetching Match History: " + error.localizedDescription
                     case .finished:
                         break
                     }
@@ -100,5 +100,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(steamID: SteamID.bit32(39401116))
 }
